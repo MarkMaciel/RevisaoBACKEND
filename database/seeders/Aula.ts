@@ -1,12 +1,13 @@
 import BaseSeeder from "@ioc:Adonis/Lucid/Seeder";
-import TurmaAluno from "App/Models/TurmaAluno";
+import Aula from "App/Models/Aula";
 
 export default class extends BaseSeeder {
   public async run() {
-    await TurmaAluno.createMany([
+    await Aula.createMany([
       {
         turmaId: 1,
-        alunoId: 1,
+        data: new Date(2022, 9, 13),
+        conteudo: "Algoritmos",
       },
     ]);
   }
