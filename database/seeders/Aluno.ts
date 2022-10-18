@@ -5,16 +5,16 @@ export default class extends BaseSeeder {
   public async run() {
     await Aluno.createMany([
       {
-        nome: "Diogo Sales",
-        cpf: "05889054104",
-        matricula: "21114290031",
-        email: "diogodobu@gmail.com",
-        telefone: "984212998",
-        cep: 72341306,
-        logradouro: "Qr 207 conjunto 06",
-        complemento: "Casa 19",
-        numero: "19",
-        bairro: "Samambaia Norte",
+        nome: "Marcos Maciel",
+        cpf: "06248753180",
+        matricula: "21114290020",
+        email: "marcos.maciel@iesb.edu.br",
+        telefone: "61981467652",
+        cep: 72251604,
+        logradouro: "Qno 06 Conjunto D",
+        complemento: "Casa 17",
+        numero: "17",
+        bairro: "Setor O",
       },
     ]);
   }
