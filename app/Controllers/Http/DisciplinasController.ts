@@ -1,10 +1,11 @@
 // import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
-import Disciplina from "App/Models/Disciplina";
+import Disciplina from "App/Models/Discplina";
+
 
 export default class DisciplinasController {
   async index() {
-    return await Disciplina.query().preload("curso");
+    return await Disciplina.all()
   }
   async store({ request }) {
     const dados = request.only(["nome", "cursoId"]);
