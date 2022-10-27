@@ -1,13 +1,14 @@
 // import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 import Aluno from "App/Models/Aluno";
+import AlunoValidator from "App/Validators/AlunoValidator";
 
 export default class AlunosController {
   async index() {
     return await Aluno.all();
   }
   async store({ request }) {
-    const dados = request.validate([
+    const dados = await request.validate(AlunoValidator)([
       "nome",
       "cpf",
       "matricula",
